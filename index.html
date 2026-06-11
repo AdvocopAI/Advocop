@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advocop | Cyber-Legal Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Inter:wght@300;400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: [
+                '-apple-system', 
+                'BlinkMacSystemFont', 
+                '"Segoe UI"', 
+                'Roboto', 
+                'Helvetica', 
+                'Arial', 
+                'sans-serif'
+              ],
+              mono: ['Roboto Mono', 'monospace'],
+            },
+            colors: {
+              slate: {
+                850: '#151e2e',
+                900: '#0f172a',
+                950: '#020617',
+              },
+              // OMNI-CPO HARMONY PALETTE
+              advocop: {
+                50: '#eafafc',
+                100: '#caeff4',
+                200: '#ace3ea',
+                300: '#90d5de',
+                400: '#72c9d5', // Primary Glow
+                500: '#66bec9',
+                600: '#5bb1bc',
+                700: '#52a3ae',
+                800: '#518f97',
+                900: '#4f7c81',
+              },
+              // Legacy support mapped to new palette for instant harmony
+              emerald: {
+                400: '#72c9d5', // Mapped to New_Color400
+                500: '#66bec9', // Mapped to New_Color500
+                950: '#020617', // Keep dark void
+              }
+            },
+            boxShadow: {
+              'neon': '0 0 5px rgba(114, 201, 213, 0.5), 0 0 20px rgba(114, 201, 213, 0.3)',
+              'neon-strong': '0 0 10px rgba(114, 201, 213, 0.8), 0 0 40px rgba(114, 201, 213, 0.5)',
+              'text-neon-sm': '0 0 5px rgba(114, 201, 213, 0.5)',
+            },
+            animation: {
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'scan': 'scan 3s linear infinite',
+            },
+            keyframes: {
+              scan: {
+                '0%': { transform: 'translateY(-100%)' },
+                '100%': { transform: 'translateY(100%)' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #020617;
+        color: #e2e8f0;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #020617;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #72c9d5;
+      }
+      .blurred-text-content {
+        filter: blur(4px);
+        user-select: none;
+      }
+      .sharp-text-content {
+        filter: none !important;
+        text-shadow: 0 0 8px rgba(52, 211, 153, 0.6);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
