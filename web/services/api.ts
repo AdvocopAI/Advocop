@@ -11,9 +11,9 @@ export const uploadDocument = async (files: File[], context?: IntakeContext): Pr
     formData.append('context', JSON.stringify(context));
   }
 
-  // TIKUN: Increased timeout to 180s for Deep Reasoning
+  // TIKUN: Increased timeout to 300s for Deep Reasoning
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 180000);
+  const timeoutId = setTimeout(() => controller.abort(), 300000);
 
   try {
     const apiUrl = import.meta.env.VITE_API_URL || '';
